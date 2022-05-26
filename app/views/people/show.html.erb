@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hambaretterem</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+  
+    <%= stylesheet_link_tag "booking", "data-turbo-track": "reload" %>
+  </head>
+
+  <body>
+    <div class="topnav">
+      <a href="/">Főoldal</a>
+      <a href="/menu">Étlap</a>
+      <a href="/people/new">Új foglalás</a>
+      <a class="active" href="/people">Eddigi foglalások</a>
+    </div>
+
+<h1>Foglalás részletei</h1>
+    <div class="container">
+    <div class="row">
+        <div class="col col-6 col-sm-4">
+            <div>
+              <p>Név: <%= @person.name %></p>
+            </div>
+        </div>
+        </div>
+        <div class="row">
+        <div class="col col-6 col-sm-4">
+            <div>
+              <p>Telefonszám: <%= @person.mobil %></p>
+            </div>
+        </div>
+        </div>
+        <div class="row">
+            <div class="col col-6 col-sm-4">
+                <div>
+                    <p>Dátum: <%= @person.day %></p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+                <div class="col col-6 col-sm-4">
+                    <div>
+                    <p>Időpont: <%= @person.time %></p>
+                    </div>
+                </div>
+        </div>
+        <div class="row">
+        <div class="col col-6 col-sm-4">
+            <div>
+              <p>Helyek száma: <%= @person.peopleNumber %></p>
+            </div>
+        </div>
+        </div>
+        <div class="row">
+          <div class="col col-6 col-sm-2">
+          <a class="btn btn-primary bg-secondary border-secondary" href="/people">Vissza</a>
+          </div>
+          <div class="col col-8 col-sm-2">
+          <%= button_to "Törlés", @person, method: :delete %>
+          </div>    
+        </form>
+        </div>
+        </div>
+    </div>
+
+</body>
+</html>

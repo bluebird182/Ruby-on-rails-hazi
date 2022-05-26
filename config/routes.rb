@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :people
+  resources :foods
   #resources :candidates
 
   #get 'users/new', to: 'users#new', as: 'register'

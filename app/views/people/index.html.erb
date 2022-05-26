@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hambaretterem</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <%= stylesheet_link_tag "menu", "data-turbo-track": "reload" %>
+
+  </head>
+
+  <body>
+    <div class="topnav">
+      <a href="/">Főoldal</a>
+      <a href="/foods">Étlap</a>
+      <a href="/people/new">Új foglalás</a>
+      <a class="active" href="/people">Eddigi foglalások</a>
+    </div>
+  <div class="table-responsive">
+
+<table class="table table-striped table-hover">
+<thead>
+  <tr>
+    <th scope="col">Név</th>
+    <th scope="col">Telefonszám</th>
+    <th scope="col">Dátum</th>
+    <th scope="col">Időpont</th>
+    <th scope="col">Helyek száma</th>
+    <th scope="col">Szerkesztés</th>
+    <th scope="col">Megtekintés</th>
+  </tr>
+</thead>
+<% @people.each do |person| %>
+<tbody>
+<tr>
+<td><%= person.name %></td>
+<td><%= person.mobil %></td>
+<td><%= person.day %></td>
+<td><%= person.time %></td>
+<td><%= person.peopleNumber %></td>
+<td style="text-align: center;"> <%= link_to "Módosítás", edit_person_path(person.id) %> </td>
+<td style="text-align: center;"> <%= link_to "Részletek", person %> </td>
+</tr>
+</tbody>
+<% end %>
+</table>
+    </div>
+    </body>
+</html>
