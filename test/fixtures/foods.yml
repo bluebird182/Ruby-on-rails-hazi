@@ -1,13 +1,13 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
-  price: MyString
-  description: MyString
-  category: MyString
+  name: BBQ cafatos marhaszendvics
+  price: 2000
+  description: BBQ tépett marhanyak
+  category: Főétel
 
 two:
-  name: MyString
-  price: MyString
-  description: MyString
-  category: MyString
+  name: Sonkás pizza
+  price: 1000
+  description: Paradicsomos alap, Sonka, Sajt
+  category: Főétel

@@ -13,7 +13,7 @@
   <body>
     <div class="topnav">
       <a href="/">Főoldal</a>
-      <a href="/menu">Étlap</a>
+      <a href="/foods">Étlap</a>
       <a class="active" href="/people/new">Új foglalás</a>
       <a href="/people">Eddigi foglalások</a>
     </div>
@@ -25,7 +25,7 @@
             <div class="col col-6 col-sm-4">
                 <div>
                     <p>Válasszon egy dátumot:</p>
-                    <%= p.text_field :day %>
+                    <%= p.text_field :day, placeholder: "pl. 2022.04.06." %>
                 </div>
             </div>
         </div>
@@ -33,7 +33,7 @@
                 <div class="col col-6 col-sm-4">
                     <div>
                     <p>Időpont:</p>
-                    <%= p.time_field :time%>
+                    <%= p.text_field :time, placeholder: "pl. 10:00"%>
                     </div>
                 </div>
         </div>
